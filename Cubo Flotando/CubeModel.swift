@@ -10,7 +10,7 @@ import Foundation
 
 class CubeModel {
     
-    var L = 30.0
+    var L = 1.0
     private var g = 9.8
     lazy var w = sqrt((2*g)/L) // It is found when neccesary.
     //   private var A = 1.0

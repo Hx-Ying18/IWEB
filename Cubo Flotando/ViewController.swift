@@ -47,6 +47,7 @@ class ViewController: UIViewController, FunctionViewDataSource {
     
     // The update also display the new
     @IBAction func updateLado(_ sender: UISlider) {
+        
         cubeModel.L =   Double(sender.value)*100
         
         posTimeFunctionView.setNeedsDisplay()

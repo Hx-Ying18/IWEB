@@ -72,7 +72,7 @@ class FunctionView: UIView {
         xaxis.stroke()
         
         UIColor.black.setStroke()
-        yaxis.lineWidth = 1.0
+        yaxis.lineWidth = CGFloat(lw)
         yaxis.stroke()
     }
     
@@ -110,7 +110,7 @@ class FunctionView: UIView {
             //path.addLine(to: CGPoint(x:xnext, y:ynext))
         }
         UIColor.red.setStroke()
-        path.lineWidth = 1.0
+        path.lineWidth = CGFloat(lw)
         path.stroke()
     }
     
