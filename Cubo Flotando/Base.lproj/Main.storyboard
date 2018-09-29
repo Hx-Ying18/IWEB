@@ -52,7 +52,7 @@
                                             <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qj0-Iv-oTF">
                                                 <rect key="frame" x="0.0" y="26.333333333333343" width="414" height="316"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qb-d2-aZm">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qb-d2-aZm" customClass="FunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="105.33333333333333"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prh-fB-W6y">
@@ -69,7 +69,7 @@
                                                             <constraint firstAttribute="trailing" secondItem="Prh-fB-W6y" secondAttribute="trailing" constant="10" id="ZWu-ox-bQz"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfL-TN-vYE">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfL-TN-vYE" customClass="FunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="105.33333333333334" width="414" height="105.33333333333334"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m/s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ly-wB-WNu">
@@ -86,7 +86,7 @@
                                                             <constraint firstItem="9ly-wB-WNu" firstAttribute="top" secondItem="pfL-TN-vYE" secondAttribute="top" id="zQZ-O9-Muw"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiF-Lu-Tai">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiF-Lu-Tai" customClass="FunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="210.66666666666666" width="414" height="105.33333333333334"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m/s^2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wV3-do-1FT">
@@ -128,7 +128,7 @@
                                                     </slider>
                                                 </subviews>
                                             </stackView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3A7-je-o06">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3A7-je-o06" customClass="FunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="30" width="414" height="312.33333333333331"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
@@ -158,6 +158,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="accTimeFunctionView" destination="HiF-Lu-Tai" id="o8V-y7-pzx"/>
+                        <outlet property="posTimeFunctionView" destination="3qb-d2-aZm" id="pV7-nJ-hiC"/>
+                        <outlet property="speedPosFunctionView" destination="3A7-je-o06" id="4re-yy-hAw"/>
+                        <outlet property="speedTimeFunctionView" destination="pfL-TN-vYE" id="O9A-Bj-qBY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
