@@ -44,7 +44,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="a4y-zZ-sWh">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="a4y-zZ-sWh">
                                                         <rect key="frame" x="36" y="0.0" width="380" height="17.333333333333332"/>
                                                     </slider>
                                                 </subviews>
@@ -160,6 +160,7 @@
                     </view>
                     <connections>
                         <outlet property="accTimeFunctionView" destination="HiF-Lu-Tai" id="o8V-y7-pzx"/>
+                        <outlet property="ladoSlider" destination="a4y-zZ-sWh" id="SMj-qC-AfZ"/>
                         <outlet property="posTimeFunctionView" destination="3qb-d2-aZm" id="pV7-nJ-hiC"/>
                         <outlet property="speedPosFunctionView" destination="3A7-je-o06" id="4re-yy-hAw"/>
                         <outlet property="speedTimeFunctionView" destination="pfL-TN-vYE" id="O9A-Bj-qBY"/>

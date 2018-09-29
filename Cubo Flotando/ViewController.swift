@@ -22,23 +22,10 @@ class ViewController: UIViewController, FunctionViewDataSource {
     
     @IBOutlet weak var speedPosFunctionView: FunctionView!
     
+    @IBOutlet weak var ladoSlider: UISlider!
+
     
-    
-    var L: Double = 0.0 {
-        didSet{
-            posTimeFunctionView.setNeedsDisplay()
-            speedTimeFunctionView.setNeedsDisplay()
-            accTimeFunctionView.setNeedsDisplay()
-            speedPosFunctionView.setNeedsDisplay()
-        }
-    }
-    
-    @IBAction func updateLado(_ sender: UISlider) {
-        
-        
-    }
-    
-    var cubeModel = CubeModel() // It is created an object of class cubeModel
+    var cubeModel = CubeModel() // It is created an object of class cubeMode
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,11 +35,24 @@ class ViewController: UIViewController, FunctionViewDataSource {
         speedTimeFunctionView.dataSource = self
         accTimeFunctionView.dataSource = self
         speedPosFunctionView.dataSource = self
+        
+        ladoSlider.sendActions(for: .valueChanged)
+
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // The update also display the new
+    @IBAction func updateLado(_ sender: UISlider) {
+        cubeModel.L =   Double(sender.value)*100
+        
+        posTimeFunctionView.setNeedsDisplay()
+        speedTimeFunctionView.setNeedsDisplay()
+        accTimeFunctionView.setNeedsDisplay()
+        speedPosFunctionView.setNeedsDisplay()
     }
     
     func startTimeOfFunctionView(_ functionView: FunctionView) -> Double {

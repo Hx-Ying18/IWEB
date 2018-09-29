@@ -35,6 +35,7 @@ class FunctionView: UIView {
     
     @IBInspectable
     var lw : Double = 5
+
     
     // It is created an atribute, so to use the functions that matchees.
     weak var dataSource: FunctionViewDataSource!
