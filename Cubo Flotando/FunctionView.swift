@@ -54,6 +54,12 @@ class FunctionView: UIView {
         }
     }
     
+    @IBInspectable
+    var textX: String = "x"
+    
+    @IBInspectable
+    var textY: String = "y"
+    
     // It is created an atribute, so to use the functions that matchees.
     weak var dataSource: FunctionViewDataSource!
   
@@ -188,6 +194,22 @@ class FunctionView: UIView {
     /** Draw the text */
     private func drawText() {
         let attrs = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.caption1)]
+        let offset: CGFloat = 4 // Separation from the text to teh bounds
+        
+        // It is chosen the texts according to the type of dataSOurce
+        
+        
+        let asX = NSAttributedString(string: textX, attributes: attrs)
+        let sizeX = asX.size()
+        let posX = CGPoint(x: xmax - sizeX.width - offset, y: ymax/2 + offset)
+        asX.draw(at: posX)
+        
+        
+        
+        let asY = NSAttributedString(string: textY, attributes: attrs)
+        let posY = CGPoint(x: xmax - offset, y: ymax/2 + offset)
+        asY.draw(at: posY)
+        
     }
     
     // It must be translated the coordinates found by the CubeModel to teh UIView: just centering in the point (xmax/2, ymax/2)
