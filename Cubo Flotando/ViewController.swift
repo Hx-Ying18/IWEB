@@ -43,7 +43,7 @@ class ViewController: UIViewController, FunctionViewDataSource {
         accTimeFunctionView.dataSource = self
         speedPosFunctionView.dataSource = self
         
-        print("im here")
+        //print("im here")
         
         // cubeModel.L = 1.0
         ladoSlider.sendActions(for: .valueChanged)
@@ -83,7 +83,7 @@ class ViewController: UIViewController, FunctionViewDataSource {
         let speed = cubeModel.speedAtTime(t)
         let acc = cubeModel.accAtTime(t)
         
-        print("arrives teh foramtter")
+        // print("arrives teh foramtter")
         
         // It is formatted as desired.
         let formatter = NumberFormatter()

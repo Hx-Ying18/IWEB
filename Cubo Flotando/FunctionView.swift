@@ -71,7 +71,7 @@ class FunctionView: UIView {
         yaxis.addLine(to: CGPoint(x:(xmax/2), y:ymax))
         
         UIColor.black.setStroke()
-        xaxis.lineWidth = 1.0
+        xaxis.lineWidth = CGFloat(lw)
         xaxis.stroke()
         
         UIColor.black.setStroke()
@@ -90,14 +90,16 @@ class FunctionView: UIView {
         // let ymax = bounds.size.height
         
         //Initial position
-        var x0 = (xmax/2)
-        var y0 = (ymax/2)
-        var t0 = 0.0
+//        var x0 = (xmax/2)
+//        var y0 = (ymax/2)
+        let t0 = dataSource.startTimeOfFunctionView(self)
+        let p = dataSource.pointOfFunctionView(self, atTime: t0)
+        path.move(to: CGPoint(x: p.x, y: p.y))
         
-        path.move(to: CGPoint(x: x0, y: y0))
+        // Se repite dos veces el mismo punto
         
         // It is draw the path
-        for t in stride (from: t0, to: 800.0, by: 2.0){
+        for t in stride (from: t0, to: 50, by: 0.5){
             
             // Find next point
             // var xnext = nextX(t)
