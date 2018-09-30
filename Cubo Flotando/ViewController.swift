@@ -107,6 +107,10 @@ class ViewController: UIViewController, FunctionViewDataSource {
     
     @IBAction func upViewsSwipe(_ sender: UISwipeGestureRecognizer) {
         print("The up views were swiped")
+        posTimeFunctionView.color = .blue
+        speedTimeFunctionView.color = .blue
+        accTimeFunctionView.color = .blue
+        
     }
     func startTimeOfFunctionView(_ functionView: FunctionView) -> Double {
         return 0
