@@ -83,8 +83,6 @@ class ViewController: UIViewController, FunctionViewDataSource {
         let speed = cubeModel.speedAtTime(t)
         let acc = cubeModel.accAtTime(t)
         
-        // print("arrives teh foramtter")
-        
         // It is formatted as desired.
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
@@ -94,10 +92,10 @@ class ViewController: UIViewController, FunctionViewDataSource {
             posLabel.text = "\(fpos) m"
         }
         if let fspeed = formatter.string(from: speed as NSNumber){
-            speedLabel.text = "\(fspeed) m"
+            speedLabel.text = "\(fspeed) m/s"
         }
         if let facc = formatter.string(from: acc as NSNumber){
-            accLabel.text = "\(facc) m"
+            accLabel.text = "\(facc) m/s^2"
         }
         
     }
