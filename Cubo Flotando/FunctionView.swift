@@ -193,7 +193,11 @@ class FunctionView: UIView {
     
     /** Draw the text */
     private func drawText() {
-        let attrs = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.caption1)]
+        //Is not seen
+        // let attrs = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.caption1)]
+        
+        let attrs = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12)]
+        
         let offset: CGFloat = 4 // Separation from the text to teh bounds
         
         // It is chosen the texts according to the type of dataSOurce
