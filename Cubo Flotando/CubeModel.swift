@@ -12,11 +12,13 @@ class CubeModel {
     
     // As the view can change the model, they must be in alert
     
-    var interestT : Double = 0.0 {
-        didSet{
-            setNeedsDisplay()
-        }
-    }
+    var interestT : Double = 0.0
+    // No need of chanign it?
+//    {
+//        didSet{
+//            setNeedsDisplay()
+//        }
+//    }
     
     var L : Double = 1.0{
         didSet {

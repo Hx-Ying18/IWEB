@@ -26,7 +26,7 @@ class ViewController: UIViewController, FunctionViewDataSource {
 
     @IBOutlet weak var posLabel: UILabel!
     
-    
+    @IBOutlet weak var speedLabel: UILabel!
     
     @IBOutlet weak var accLabel: UILabel!
     
@@ -102,4 +102,25 @@ class ViewController: UIViewController, FunctionViewDataSource {
         }
     }
     
+    /**
+     Given the FunctionVIew it takes the
+     InterestTime and find the interest points, that
+     is to say, for every FunctionView.
+    */
+    func pOfInterestFunctionView(_ functionView: FunctionView) -> Point {
+        switch functionView {
+        case posTimeFunctionView:
+            let t = cubeModel.interestT
+            return Point(x: t, y: cubeModel.posAtTime(t))
+        case speedTimeFunctionView:
+            let t = cubeModel.interestT
+            return Point(x: t, y: cubeModel.speedAtTime(t))
+        case accTimeFunctionView:
+            let t = cubeModel.interestT
+            return Point(x: t, y: cubeModel.accAtTime(t))
+        default:
+            let t = cubeModel.interestT
+            return Point(x: cubeModel.posAtTime(t), y: cubeModel.speedAtTime(t))
+        }
+    }
 }

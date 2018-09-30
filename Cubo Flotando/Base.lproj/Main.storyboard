@@ -170,6 +170,7 @@
                         <outlet property="ladoSlider" destination="a4y-zZ-sWh" id="SMj-qC-AfZ"/>
                         <outlet property="posLabel" destination="Prh-fB-W6y" id="aa8-MZ-vbQ"/>
                         <outlet property="posTimeFunctionView" destination="3qb-d2-aZm" id="pV7-nJ-hiC"/>
+                        <outlet property="speedLabel" destination="9ly-wB-WNu" id="Ynu-Pv-uuc"/>
                         <outlet property="speedPosFunctionView" destination="3A7-je-o06" id="4re-yy-hAw"/>
                         <outlet property="speedTimeFunctionView" destination="pfL-TN-vYE" id="O9A-Bj-qBY"/>
                         <outlet property="timeSlider" destination="9R4-nn-Lb9" id="J51-FJ-ZWR"/>
