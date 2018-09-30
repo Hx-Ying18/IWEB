@@ -68,7 +68,7 @@ class ViewController: UIViewController, FunctionViewDataSource {
     
      // Update the labels with a certain value, and vary the display of an special point.
     @IBAction func updateTime(_ sender: UISlider) {
-        cubeModel.interestT = Double(sender.value)
+        cubeModel.interestT = Double(sender.value)*40
         let t = cubeModel.interestT
         // THe pioints of interest are represented and labeled
         
@@ -97,6 +97,11 @@ class ViewController: UIViewController, FunctionViewDataSource {
         if let facc = formatter.string(from: acc as NSNumber){
             accLabel.text = "\(facc) m/s^2"
         }
+        
+        posTimeFunctionView.setNeedsDisplay()
+        speedTimeFunctionView.setNeedsDisplay()
+        accTimeFunctionView.setNeedsDisplay()
+        speedPosFunctionView.setNeedsDisplay()
         
     }
     
