@@ -26,6 +26,15 @@ class ViewController: UIViewController, FunctionViewDataSource {
 
     @IBOutlet weak var posLabel: UILabel!
     
+    @IBOutlet weak var accLabel: UILabel!
+    
+    @IBOutlet weak var timeSlider: UISlider!
+    
+    // Update the labels with a certain value, and vary the display of an special point.
+    @IBAction func updateTime(_ sender: UISlider) {
+        
+    }
+    
     var cubeModel = CubeModel() // It is created an object of class cubeMode
     
     override func viewDidLoad() {
