@@ -20,6 +20,9 @@ protocol FunctionViewDataSource : class{
     func startTimeOfFunctionView(_  functionView: FunctionView) -> Double
     func endTimeOfFunctionView(_ functionView: FunctionView) -> Double
     func pointOfFunctionView(_ functionView: FunctionView, atTime time: Double) -> Point
+    // It takes teh time from an atribute in the cube Model
+    func pOfInterestFunctionView(_ functionView: FunctionView) -> [Point]
+    
 }
 
 

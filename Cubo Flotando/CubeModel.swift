@@ -11,6 +11,13 @@ import Foundation
 class CubeModel {
     
     // As the view can change the model, they must be in alert
+    
+    var interestT : Double = 0.0 {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    
     var L : Double = 1.0{
         didSet {
             updateW()
