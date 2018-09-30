@@ -24,6 +24,7 @@ class ViewController: UIViewController, FunctionViewDataSource {
     
     @IBOutlet weak var ladoSlider: UISlider!
 
+    @IBOutlet weak var posLabel: UILabel!
     
     var cubeModel = CubeModel() // It is created an object of class cubeMode
     
@@ -36,8 +37,8 @@ class ViewController: UIViewController, FunctionViewDataSource {
         accTimeFunctionView.dataSource = self
         speedPosFunctionView.dataSource = self
         
+        // cubeModel.L = 1.0
         ladoSlider.sendActions(for: .valueChanged)
-
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,7 +49,7 @@ class ViewController: UIViewController, FunctionViewDataSource {
     // The update also display the new
     @IBAction func updateLado(_ sender: UISlider) {
         
-        cubeModel.L =   Double(sender.value)*100
+        cubeModel.L = Double(sender.value)*100
         
         posTimeFunctionView.setNeedsDisplay()
         speedTimeFunctionView.setNeedsDisplay()

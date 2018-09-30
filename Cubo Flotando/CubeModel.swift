@@ -10,11 +10,21 @@ import Foundation
 
 class CubeModel {
     
-    var L = 1.0
+    // As the view can change the model, they must be in alert
+    var L : Double = 1.0{
+        didSet {
+            updateW()
+        }
+    }
+    
     private var g = 9.8
-    lazy var w = sqrt((2*g)/L) // It is found when neccesary.
+    var w = 6.0 // It is found when neccesary.
     //   private var A = 1.0
     
+    //Update the value of w that change due to actions to the view.
+    private func updateW() {
+        w = sqrt((2*g)/L)
+    }
     // This methods must be public so it can be acceced to them from the viewCOntroller
     /**
      Give the position of the cube at time t.
