@@ -105,6 +105,9 @@ class ViewController: UIViewController, FunctionViewDataSource {
         
     }
     
+    @IBAction func upViewsSwipe(_ sender: UISwipeGestureRecognizer) {
+        print("The up views were swiped")
+    }
     func startTimeOfFunctionView(_ functionView: FunctionView) -> Double {
         return 0
     }
