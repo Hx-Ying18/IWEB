@@ -127,7 +127,7 @@ class FunctionView: UIView {
     
         let p = dataSource.pOfInterestFunctionView(self)
         
-        let path = UIBezierPath(ovalIn: CGRect(x: centerX(p.x)-4, y: centerY(p.y)-4, width: 8, heigth:8))
+        let path = UIBezierPath(ovalIn: CGRect(x: centerX(p.x)-4.0, y: centerY(p.y)-4.0, width: 8, height:8))
         UIColor.black.set()
         path.stroke()
         path.fill()
