@@ -39,6 +39,20 @@ class FunctionView: UIView {
     @IBInspectable
     var lw : Double = 5
 
+    //Number of points per unit represented
+    @IBInspectable
+    var scaleX: Double = 1.0 {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable
+    var scaleY: Double = 1.0 {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
     
     // It is created an atribute, so to use the functions that matchees.
     weak var dataSource: FunctionViewDataSource!
@@ -135,6 +149,28 @@ class FunctionView: UIView {
         
     }
     
+    /** Draw ticks
+ */
+    private func drawTicks() {
+        
+        let numberOfTicks = 8.0
+        
+        UIColor.black.set()
+        
+        let ptsByTick = Double(bounds.size.height) / numberOfTicks
+        let unitsYByTick = (ptsByTick / scaleY).roundedOneDigit
+        for y in stride(from: -numberOfTicks * unitsYByTick, to: numberOfTicks * unitsYByTick, by: unitsYByTick){
+            let px = centerX(0)
+            let py = centerY(y)
+            
+            let path = UIBezierPath()
+            path.move(to: CGPoint(x: px - 2, y: py))
+            path.addLine(to: CGPoint(x: px+2, y: py))
+            
+            path.stroke()
+        }
+    }
+    
     // It must be translated the coordinates found by the CubeModel to teh UIView: just centering in the point (xmax/2, ymax/2)
     private func centerX(_ x: Double) -> Double {
         return (Double(x) + Double(xmax/2))
@@ -143,4 +179,23 @@ class FunctionView: UIView {
         return (Double(y) + Double(ymax/2))
     }
     
+}
+
+extension Double{
+    var roundedOneDigit: Double {
+        get {
+            var d = self
+            var by = 1.0
+            
+            while d > 10 {
+                d /= 10
+                by = by * 10
+            }
+            while d < 1{
+                d *= 10
+                by = by / 10
+            }
+            return d.rounded() * by
+        }
+    }
 }
