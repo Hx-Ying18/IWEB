@@ -94,7 +94,7 @@ class FunctionView: UIView {
 //        var y0 = (ymax/2)
         let t0 = dataSource.startTimeOfFunctionView(self)
         let p = dataSource.pointOfFunctionView(self, atTime: t0)
-        path.move(to: CGPoint(x: p.x, y: p.y))
+        path.move(to: CGPoint(x: centerX(p.x), y: centerY(p.y)))
         
         // Se repite dos veces el mismo punto
         
