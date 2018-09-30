@@ -100,8 +100,9 @@ class FunctionView: UIView {
         
         // Se repite dos veces el mismo punto
         
+        let tf = dataSource.endTimeOfFunctionView(self)
         // It is draw the path
-        for t in stride (from: t0, to: 300, by: 1.5){
+        for t in stride (from: t0, to: tf, by: 1.5){
             
             // Find next point
             // var xnext = nextX(t)
