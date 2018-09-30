@@ -110,6 +110,9 @@ class ViewController: UIViewController, FunctionViewDataSource {
         posTimeFunctionView.color = .blue
         speedTimeFunctionView.color = .blue
         accTimeFunctionView.color = .blue
+        posTimeFunctionView.setNeedsDisplay()
+        speedTimeFunctionView.setNeedsDisplay()
+        accTimeFunctionView.setNeedsDisplay()
         
     }
     func startTimeOfFunctionView(_ functionView: FunctionView) -> Double {

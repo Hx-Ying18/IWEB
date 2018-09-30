@@ -138,7 +138,7 @@ class FunctionView: UIView {
             path.addLine(to: CGPoint(x: centerX(nextPoint.x), y: centerY(nextPoint.y)))
             //path.addLine(to: CGPoint(x:xnext, y:ynext))
         }
-        UIColor.red.setStroke()
+        color.setStroke()
         path.lineWidth = CGFloat(lw)
         path.stroke()
     }
