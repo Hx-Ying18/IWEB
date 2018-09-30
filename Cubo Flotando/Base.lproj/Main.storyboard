@@ -129,7 +129,7 @@
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9R4-nn-Lb9">
                                                         <rect key="frame" x="55.5" y="0.0" width="266.5" height="1"/>
                                                         <connections>
-                                                            <action selector="updateTime:" destination="BYZ-38-t0r" eventType="valueChanged" id="Of7-xQ-gPp"/>
+                                                            <action selector="updateTime:" destination="BYZ-38-t0r" eventType="valueChanged" id="LQ4-9f-Q2Y"/>
                                                         </connections>
                                                     </slider>
                                                 </subviews>
@@ -174,7 +174,6 @@
                         <outlet property="speedPosFunctionView" destination="3A7-je-o06" id="4re-yy-hAw"/>
                         <outlet property="speedTimeFunctionView" destination="pfL-TN-vYE" id="O9A-Bj-qBY"/>
                         <outlet property="timeSlider" destination="9R4-nn-Lb9" id="J51-FJ-ZWR"/>
-                        <outlet property="updateTime" destination="9R4-nn-Lb9" id="XO0-Lq-6uY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -22,8 +22,6 @@ class ViewController: UIViewController, FunctionViewDataSource {
     
     @IBOutlet weak var speedPosFunctionView: FunctionView!
     
-    @IBOutlet weak var ladoSlider: UISlider!
-
     @IBOutlet weak var posLabel: UILabel!
     
     @IBOutlet weak var speedLabel: UILabel!
@@ -31,6 +29,8 @@ class ViewController: UIViewController, FunctionViewDataSource {
     @IBOutlet weak var accLabel: UILabel!
     
     @IBOutlet weak var timeSlider: UISlider!
+    
+    @IBOutlet weak var ladoSlider: UISlider!
     
      var cubeModel = CubeModel() // It is created an object of class cubeMode
     
@@ -43,8 +43,11 @@ class ViewController: UIViewController, FunctionViewDataSource {
         accTimeFunctionView.dataSource = self
         speedPosFunctionView.dataSource = self
         
+        print("im here")
+        
         // cubeModel.L = 1.0
         ladoSlider.sendActions(for: .valueChanged)
+        timeSlider.sendActions(for: .valueChanged)
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,16 +66,39 @@ class ViewController: UIViewController, FunctionViewDataSource {
         speedPosFunctionView.setNeedsDisplay()
     }
     
-    // Update the labels with a certain value, and vary the display of an special point.
+     // Update the labels with a certain value, and vary the display of an special point.
     @IBAction func updateTime(_ sender: UISlider) {
         cubeModel.interestT = Double(sender.value)
-        
+        let t = cubeModel.interestT
         // THe pioints of interest are represented and labeled
         
         // Labels are initialized
         posLabel.text = ""
         speedLabel.text = ""
         accLabel.text = ""
+        
+        // Filled the labels with pos, speed and acc.
+        
+        let pos = cubeModel.posAtTime(t)
+        let speed = cubeModel.speedAtTime(t)
+        let acc = cubeModel.accAtTime(t)
+        
+        print("arrives teh foramtter")
+        
+        // It is formatted as desired.
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        
+        if let fpos = formatter.string(from: pos as NSNumber){
+            posLabel.text = "\(fpos) m"
+        }
+        if let fspeed = formatter.string(from: speed as NSNumber){
+            speedLabel.text = "\(fspeed) m"
+        }
+        if let facc = formatter.string(from: acc as NSNumber){
+            accLabel.text = "\(facc) m"
+        }
         
     }
     
