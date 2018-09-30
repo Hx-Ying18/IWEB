@@ -99,7 +99,7 @@ class FunctionView: UIView {
         // Se repite dos veces el mismo punto
         
         // It is draw the path
-        for t in stride (from: t0, to: 50, by: 0.5){
+        for t in stride (from: t0, to: 100, by: 0.5){
             
             // Find next point
             // var xnext = nextX(t)
@@ -117,6 +117,12 @@ class FunctionView: UIView {
         UIColor.red.setStroke()
         path.lineWidth = CGFloat(lw)
         path.stroke()
+    }
+    
+    /** Draw POI
+ */
+    private func drawPOI() {
+        
     }
     
     // It must be translated the coordinates found by the CubeModel to teh UIView: just centering in the point (xmax/2, ymax/2)
