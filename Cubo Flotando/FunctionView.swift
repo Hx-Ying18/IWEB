@@ -37,7 +37,7 @@ class FunctionView: UIView {
     var color: UIColor = .red
     
     @IBInspectable
-    var lw : Double = 5
+    var lw : Double = 1.0
 
     //Number of points per unit represented
     @IBInspectable
@@ -67,6 +67,7 @@ class FunctionView: UIView {
         drawAxis()
         drawTrajectory()
         drawPOI()
+        drawTicks()
     }
     
     /** Draw the axis in the UIView
@@ -157,8 +158,8 @@ class FunctionView: UIView {
         
         UIColor.black.set()
         
-        let ptsByTick = Double(bounds.size.height) / numberOfTicks
-        let unitsYByTick = (ptsByTick / scaleY).roundedOneDigit
+        let ptsYByTick = Double(bounds.size.height) / numberOfTicks
+        let unitsYByTick = (ptsYByTick / scaleY).roundedOneDigit
         for y in stride(from: -numberOfTicks * unitsYByTick, to: numberOfTicks * unitsYByTick, by: unitsYByTick){
             let px = centerX(0)
             let py = centerY(y)
@@ -168,7 +169,25 @@ class FunctionView: UIView {
             path.addLine(to: CGPoint(x: px+2, y: py))
             
             path.stroke()
+            }
+        
+        let ptsXByTick = Double(bounds.size.width) / numberOfTicks
+        let unitsXByTick = (ptsXByTick / scaleX).roundedOneDigit
+        for x in stride(from: -numberOfTicks * unitsXByTick, to: numberOfTicks * unitsXByTick, by: unitsXByTick){
+            let px = centerX(x)
+            let py = centerY(0)
+            
+            let path = UIBezierPath()
+            path.move(to: CGPoint(x: px , y: py-2))
+            path.addLine(to: CGPoint(x: px, y: py+2))
+            
+            path.stroke()
         }
+    }
+    
+    /** Draw the text */
+    private func drawText() {
+        let attrs = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.caption1)]
     }
     
     // It must be translated the coordinates found by the CubeModel to teh UIView: just centering in the point (xmax/2, ymax/2)
