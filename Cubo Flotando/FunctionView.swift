@@ -42,6 +42,7 @@ class FunctionView: UIView {
     
     // It is created an atribute, so to use the functions that matchees.
     weak var dataSource: FunctionViewDataSource!
+  
     
     // Bounds defined as atribute
     lazy var xmax = bounds.size.width
@@ -51,6 +52,7 @@ class FunctionView: UIView {
         // Drawing code
         drawAxis()
         drawTrajectory()
+        drawPOI()
     }
     
     /** Draw the axis in the UIView
@@ -99,7 +101,7 @@ class FunctionView: UIView {
         // Se repite dos veces el mismo punto
         
         // It is draw the path
-        for t in stride (from: t0, to: 100, by: 0.5){
+        for t in stride (from: t0, to: 300, by: 1.5){
             
             // Find next point
             // var xnext = nextX(t)
@@ -122,6 +124,13 @@ class FunctionView: UIView {
     /** Draw POI
  */
     private func drawPOI() {
+    
+        let p = dataSource.pOfInterestFunctionView(self)
+        
+        let path = UIBezierPath(ovalIn: CGRect(x: centerX(p.x)-4, y: centerY(p.y)-4, width: 8, heigth:8))
+        UIColor.black.set()
+        path.stroke()
+        path.fill()
         
     }
     
