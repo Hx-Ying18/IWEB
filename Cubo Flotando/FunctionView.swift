@@ -232,9 +232,8 @@ class FunctionView: UIView {
         asX.draw(at: posX)
         
         
-        
         let asY = NSAttributedString(string: textY, attributes: attrs)
-        let posY = CGPoint(x: xmax - offset, y: ymax/2 + offset)
+        let posY = CGPoint(x: xmax/2 + offset, y: offset)
         asY.draw(at: posY)
         
     }
