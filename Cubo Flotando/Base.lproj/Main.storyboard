@@ -39,13 +39,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="568" height="0.0"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="800" text="Lado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWF-fn-6Cq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="238" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="0.0"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0001" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="a4y-zZ-sWh">
-                                                        <rect key="frame" x="236" y="0.0" width="334" height="1"/>
+                                                        <rect key="frame" x="88" y="0.0" width="482" height="1"/>
                                                         <connections>
                                                             <action selector="updateLado:" destination="BYZ-38-t0r" eventType="valueChanged" id="jzl-Jc-DHn"/>
                                                         </connections>
@@ -65,12 +65,16 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" red="0.7767757634460466" green="0.99942404029999998" blue="0.570283396830085" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstItem="Prh-fB-W6y" firstAttribute="top" secondItem="3qb-d2-aZm" secondAttribute="top" id="HSd-NE-dpF"/>
                                                             <constraint firstItem="Prh-fB-W6y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3qb-d2-aZm" secondAttribute="leading" id="IdY-aH-fRd"/>
                                                             <constraint firstAttribute="trailing" secondItem="Prh-fB-W6y" secondAttribute="trailing" constant="10" id="ZWu-ox-bQz"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Tiempo"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Posición Z"/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outletCollection property="gestureRecognizers" destination="pbF-mh-YXo" appends="YES" id="0yc-3x-oS5"/>
                                                         </connections>
@@ -85,12 +89,16 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" red="0.86722761252820502" green="0.89122342968314305" blue="0.99942404029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="9ly-wB-WNu" secondAttribute="trailing" constant="10" id="JzZ-xU-nyE"/>
                                                             <constraint firstItem="9ly-wB-WNu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pfL-TN-vYE" secondAttribute="leading" id="emi-Cy-TUd"/>
                                                             <constraint firstItem="9ly-wB-WNu" firstAttribute="top" secondItem="pfL-TN-vYE" secondAttribute="top" id="zQZ-O9-Muw"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Tiempo"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Velocidad"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiF-Lu-Tai" customClass="FunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="100" width="568" height="50"/>
@@ -102,12 +110,16 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" red="0.99942404029999998" green="0.73021547110145668" blue="0.71339208177921909" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="wV3-do-1FT" secondAttribute="trailing" constant="10" id="2j3-Ay-JXi"/>
                                                             <constraint firstItem="wV3-do-1FT" firstAttribute="top" secondItem="HiF-Lu-Tai" secondAttribute="top" id="dg7-LE-wnR"/>
                                                             <constraint firstItem="wV3-do-1FT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HiF-Lu-Tai" secondAttribute="leading" id="wqe-jQ-Z5Z"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Tiempo"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Aceleración"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
@@ -145,7 +157,11 @@
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3A7-je-o06" customClass="FunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="568" height="160"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" red="0.99942404029999998" green="0.94833809926789425" blue="0.67248449515513253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Posición"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Velocidad"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                     </stackView>
