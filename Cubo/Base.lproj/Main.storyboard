@@ -19,62 +19,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="bottomRight" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PfT-EW-hZB" customClass="FunctionView" customModule="Cubo" customModuleProvider="target">
+                                <rect key="frame" x="-1" y="434" width="376" height="233"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Yn-mh-SA7" customClass="FunctionView" customModule="Cubo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="288" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.91108692217551868" blue="0.29557175383840861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oNN-qi-ewZ" customClass="FunctionView" customModule="Cubo" customModuleProvider="target">
+                                <rect key="frame" x="-1" y="92" width="376" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.72747956293352178" blue="0.31928013370159797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="20" maxValue="70" translatesAutoresizingMaskIntoConstraints="NO" id="cFg-oh-4y5">
+                                <rect key="frame" x="14" y="54" width="347" height="31"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="updateSize:" destination="BYZ-38-t0r" eventType="valueChanged" id="Top-aP-NCw"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kbx-RE-Ldm" customClass="FunctionView" customModule="Cubo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="190" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.51864098150000004" green="0.83094906140000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="jvx-3w-9hQ">
+                                <rect key="frame" x="14" y="386" width="347" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <viewLayoutGuide key="safeArea" id="6Fx-47-MqS"/>
+                                <connections>
+                                    <action selector="updatTimePoints:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ufw-ux-vui"/>
+                                </connections>
+                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P2 - Cubo Flotando" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNJ-2L-8Xq">
                                 <rect key="frame" x="16" y="20" width="258" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="maY-2N-O6P">
-                                <rect key="frame" x="-2" y="97" width="455" height="299"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="20" maxValue="70" translatesAutoresizingMaskIntoConstraints="NO" id="cFg-oh-4y5">
-                                        <rect key="frame" x="-2" y="0.0" width="459" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="29" id="K7m-F9-WB2"/>
-                                        </constraints>
-                                        <connections>
-                                            <action selector="updateSize:" destination="BYZ-38-t0r" eventType="valueChanged" id="Top-aP-NCw"/>
-                                        </connections>
-                                    </slider>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NAy-6i-bes">
-                                        <rect key="frame" x="0.0" y="29" width="455" height="270"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kbx-RE-Ldm" customClass="FunctionView" customModule="Cubo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="455" height="90"/>
-                                                <color key="backgroundColor" red="0.51864098150000004" green="0.83094906140000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Yn-mh-SA7" customClass="FunctionView" customModule="Cubo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="90" width="455" height="90"/>
-                                                <color key="backgroundColor" red="0.99942404029999998" green="0.91108692217551868" blue="0.29557175383840861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oNN-qi-ewZ" customClass="FunctionView" customModule="Cubo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="180" width="455" height="90"/>
-                                                <color key="backgroundColor" red="0.99942404029999998" green="0.72747956293352178" blue="0.31928013370159797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IDC-xK-KKc">
-                                <rect key="frame" x="-2" y="410" width="400" height="257"/>
-                                <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="jvx-3w-9hQ">
-                                        <rect key="frame" x="-2" y="0.0" width="404" height="31"/>
-                                        <connections>
-                                            <action selector="updatTimePoints:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ufw-ux-vui"/>
-                                        </connections>
-                                    </slider>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PfT-EW-hZB" customClass="FunctionView" customModule="Cubo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="40" width="400" height="217"/>
-                                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="Not-TO-3Iu"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.93079313838174182" blue="0.76732302180263279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -95,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+            <point key="canvasLocation" x="116" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>
