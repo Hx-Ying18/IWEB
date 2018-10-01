@@ -42,13 +42,13 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="800" text="Lado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWF-fn-6Cq">
-                                                                <rect key="frame" x="0.0" y="0.0" width="234" height="98.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="198" height="98.5"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0001" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="a4y-zZ-sWh">
-                                                                <rect key="frame" x="232" y="0.0" width="90" height="99.5"/>
+                                                                <rect key="frame" x="196" y="0.0" width="126" height="99.5"/>
                                                                 <connections>
                                                                     <action selector="updateLado:" destination="BYZ-38-t0r" eventType="valueChanged" id="jzl-Jc-DHn"/>
                                                                 </connections>
@@ -61,15 +61,18 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qb-d2-aZm" customClass="FunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prh-fB-W6y">
-                                                                        <rect key="frame" x="259.5" y="0.0" width="14.5" height="20.5"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prh-fB-W6y">
+                                                                        <rect key="frame" x="10" y="0.0" width="14.5" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="0.7767757634460466" green="0.99942404029999998" blue="0.570283396830085" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="Prh-fB-W6y" firstAttribute="top" secondItem="3qb-d2-aZm" secondAttribute="top" id="0CL-i3-Xes"/>
+                                                                    <constraint firstItem="Prh-fB-W6y" firstAttribute="leading" secondItem="3qb-d2-aZm" secondAttribute="leading" constant="10" id="CBQ-1v-NAZ"/>
+                                                                </constraints>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Tiempo"/>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Posición Z"/>
@@ -81,15 +84,18 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfL-TN-vYE" customClass="FunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="50" width="320" height="50"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="m/s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ly-wB-WNu">
-                                                                        <rect key="frame" x="245.5" y="0.0" width="28.5" height="20.5"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m/s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ly-wB-WNu">
+                                                                        <rect key="frame" x="10" y="0.0" width="28.5" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="0.86722761252820502" green="0.89122342968314305" blue="0.99942404029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="9ly-wB-WNu" firstAttribute="top" secondItem="pfL-TN-vYE" secondAttribute="top" id="8bh-FK-RA7"/>
+                                                                    <constraint firstItem="9ly-wB-WNu" firstAttribute="leading" secondItem="pfL-TN-vYE" secondAttribute="leading" constant="10" id="eUV-uM-9VE"/>
+                                                                </constraints>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Tiempo"/>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Velocidad"/>
@@ -98,15 +104,18 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiF-Lu-Tai" customClass="FunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="100" width="320" height="50"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="m/s^2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wV3-do-1FT">
-                                                                        <rect key="frame" x="228.5" y="0.0" width="45.5" height="20.5"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m/s^2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wV3-do-1FT">
+                                                                        <rect key="frame" x="10" y="0.0" width="45.5" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="0.99942404029999998" green="0.73021547110145668" blue="0.71339208177921909" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="wV3-do-1FT" firstAttribute="top" secondItem="HiF-Lu-Tai" secondAttribute="top" id="6aB-Gz-U95"/>
+                                                                    <constraint firstItem="wV3-do-1FT" firstAttribute="leading" secondItem="HiF-Lu-Tai" secondAttribute="leading" constant="10" id="r2u-Go-4OA"/>
+                                                                </constraints>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Tiempo"/>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Aceleración"/>
