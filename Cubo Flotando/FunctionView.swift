@@ -97,6 +97,7 @@ class FunctionView: UIView {
         drawTrajectory()
         drawPOI()
         drawTicks()
+        drawText()
     }
     
     /** Draw the axis in the UIView
