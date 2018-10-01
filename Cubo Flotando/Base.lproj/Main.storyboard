@@ -151,7 +151,9 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="Mqv-SB-CIT" firstAttribute="height" secondItem="p1N-L6-1Kx" secondAttribute="height" id="Lvd-1K-hTQ"/>
                                     <constraint firstItem="94s-Lw-8eu" firstAttribute="centerX" secondItem="AkH-4Q-xWo" secondAttribute="centerX" id="dWC-Tq-5qE"/>
+                                    <constraint firstItem="Mqv-SB-CIT" firstAttribute="width" secondItem="p1N-L6-1Kx" secondAttribute="width" id="gq9-j7-GBV"/>
                                     <constraint firstItem="94s-Lw-8eu" firstAttribute="top" secondItem="AkH-4Q-xWo" secondAttribute="top" id="uoU-c9-C1m"/>
                                 </constraints>
                                 <variation key="heightClass=compact" axis="horizontal"/>
