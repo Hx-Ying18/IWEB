@@ -61,8 +61,31 @@ class FunctionView: UIView {
     var textY: String = "y"
     
     // It is created an atribute, so to use the functions that matchees.
-    weak var dataSource: FunctionViewDataSource!
+    //weak var dataSource: FunctionViewDataSource!
   
+    #if TARGET_INTERFACE_BUILDER
+    var dataSource: FunctionViewDataSource!
+    #else
+    weak var dataSource: FunctionViewDataSource!
+    #endif
+    override func prepareForInterfaceBuilder() {
+        class FakeDataSource: FunctionViewDataSource {
+            func startTimeOfFunctionView(_ functionView: FunctionView) -> Double {
+                return 0.0
+            }
+            func endTimeOfFunctionView(_ functionView: FunctionView) -> Double {
+                return 300.0
+            }
+            func pointOfFunctionView(_ functionView: FunctionView, atTime time: Double) -> Point {
+                return Point(x: time, y: time)
+            }
+            
+            func pOfInterestFunctionView(_ functionView: FunctionView) -> Point {
+                return Point(x: 0, y: 0)
+            }
+        }
+        dataSource = FakeDataSource()
+    } 
     
     // Bounds defined as atribute
     lazy var xmax = bounds.size.width
