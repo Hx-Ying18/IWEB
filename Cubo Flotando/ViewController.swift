@@ -115,6 +115,17 @@ class ViewController: UIViewController, FunctionViewDataSource {
         accTimeFunctionView.setNeedsDisplay()
         
     }
+    
+    @IBAction func downViewSwipe(_ sender: UISwipeGestureRecognizer) {
+        posTimeFunctionView.color = .red
+        speedTimeFunctionView.color = .red
+        accTimeFunctionView.color = .red
+        posTimeFunctionView.setNeedsDisplay()
+        speedTimeFunctionView.setNeedsDisplay()
+        accTimeFunctionView.setNeedsDisplay()
+    }
+    
+    
     func startTimeOfFunctionView(_ functionView: FunctionView) -> Double {
         return 0
     }
