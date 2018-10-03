@@ -17,14 +17,35 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" fixedFrame="YES" image="cuboFlotando" translatesAutoresizingMaskIntoConstraints="NO" id="aKO-Q2-2yA">
+                                <rect key="frame" x="57" y="126" width="285" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQm-o9-Ggu">
+                                <rect key="frame" x="75" y="49" width="225.5" height="41"/>
+                                <string key="text">Tú lo que estás viendo es  un 
+cubo flotando . . .</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.60959278299999997" green="0.9624983775" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KQm-o9-Ggu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="6c1-L1-0Wb"/>
+                            <constraint firstItem="KQm-o9-Ggu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Aft-zw-iNM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="49.925037481259373" y="372"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cuboFlotando" width="640" height="266"/>
+    </resources>
 </document>
