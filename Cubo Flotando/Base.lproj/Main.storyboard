@@ -42,13 +42,13 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="800" text="Lado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWF-fn-6Cq">
-                                                                <rect key="frame" x="0.0" y="0.0" width="178" height="98.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="154" height="98.5"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0001" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="a4y-zZ-sWh">
-                                                                <rect key="frame" x="176" y="0.0" width="146" height="99.5"/>
+                                                                <rect key="frame" x="152" y="0.0" width="170" height="99.5"/>
                                                                 <connections>
                                                                     <action selector="updateLado:" destination="BYZ-38-t0r" eventType="valueChanged" id="jzl-Jc-DHn"/>
                                                                 </connections>
@@ -58,7 +58,7 @@
                                                     <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qj0-Iv-oTF">
                                                         <rect key="frame" x="0.0" y="108.5" width="320" height="150"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qb-d2-aZm" customClass="FunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
+                                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="3qb-d2-aZm" customClass="FunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prh-fB-W6y">
@@ -81,7 +81,7 @@
                                                                     <outletCollection property="gestureRecognizers" destination="pbF-mh-YXo" appends="YES" id="0yc-3x-oS5"/>
                                                                 </connections>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfL-TN-vYE" customClass="FunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
+                                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="pfL-TN-vYE" customClass="FunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="50" width="320" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m/s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ly-wB-WNu">
@@ -101,7 +101,7 @@
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Velocidad"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiF-Lu-Tai" customClass="FunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
+                                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="HiF-Lu-Tai" customClass="FunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="100" width="320" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m/s^2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wV3-do-1FT">
@@ -151,7 +151,7 @@
                                                             </slider>
                                                         </subviews>
                                                     </stackView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3A7-je-o06" customClass="FunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
+                                                    <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="3A7-je-o06" customClass="FunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="258.5"/>
                                                         <color key="backgroundColor" red="0.99942404029999998" green="0.94833809926789425" blue="0.67248449515513253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <userDefinedRuntimeAttributes>
