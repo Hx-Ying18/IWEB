@@ -5,5 +5,5 @@ Adrián Blázquez León
 
     Extras:
 
-	El swipe hacia la derecha en las uiview de arriba hace que el path se torne azul
+	El swipe hacia la derecha en las uiview de arriba hace que el path se torne azul y hacia la derecha rojo.
 	Textos con la adaptación de accesibilidad
