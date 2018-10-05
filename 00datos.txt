@@ -5,5 +5,9 @@ Adrián Blázquez León
 
     Extras:
 
-	El swipe hacia la derecha en las uiview de arriba hace que el path se torne azul y hacia la derecha rojo.
-	Textos con la adaptación de accesibilidad
+	En muchas herramientas de visualización de gráficas carecen de una cierta interacción con el usuario que le permita personalizar las gráficas que quiere. Con este fin, añadidos los siguientes gestos en cada uiview:
+ 
+       	- Un swipe hacia la derecha que cambia azul la línea de las gráficas.
+	- Swipe hacia la izquierda que las cambia a rojo  	
+
+	Además, nótese que los textos se adaptan al tamaño que pueda configurar el usuario en el menú de accesibilidad de su iPhone
