@@ -42,10 +42,6 @@ class ViewController: UIViewController, FunctionViewDataSource {
         speedTimeFunctionView.dataSource = self
         accTimeFunctionView.dataSource = self
         speedPosFunctionView.dataSource = self
-        
-        //print("im here")
-        
-        // cubeModel.L = 1.0
         ladoSlider.sendActions(for: .valueChanged)
         timeSlider.sendActions(for: .valueChanged)
     }
@@ -105,26 +101,30 @@ class ViewController: UIViewController, FunctionViewDataSource {
         
     }
     
-    @IBAction func upViewsSwipe(_ sender: UISwipeGestureRecognizer) {
-        print("The up views were swiped")
+//    @IBAction func upViewsSwipe(_ sender: UISwipeGestureRecognizer) {
+//        print("The up views were swiped")
+//        posTimeFunctionView.color = .blue
+//        speedTimeFunctionView.color = .blue
+//        accTimeFunctionView.color = .blue
+//        posTimeFunctionView.setNeedsDisplay()
+//        speedTimeFunctionView.setNeedsDisplay()
+//        accTimeFunctionView.setNeedsDisplay()
+//
+//    }
+    
+//    @IBAction func downViewSwipe(_ sender: UISwipeGestureRecognizer) {
+//        posTimeFunctionView.color = .red
+//        speedTimeFunctionView.color = .red
+//        accTimeFunctionView.color = .red
+//        posTimeFunctionView.setNeedsDisplay()
+//        speedTimeFunctionView.setNeedsDisplay()
+//        accTimeFunctionView.setNeedsDisplay()
+//    }
+    
+    @IBAction func swipeUpBluePTF(_ sender: UISwipeGestureRecognizer) {
+        // print("Swipe up PTF")
         posTimeFunctionView.color = .blue
-        speedTimeFunctionView.color = .blue
-        accTimeFunctionView.color = .blue
-        posTimeFunctionView.setNeedsDisplay()
-        speedTimeFunctionView.setNeedsDisplay()
-        accTimeFunctionView.setNeedsDisplay()
-        
     }
-    
-    @IBAction func downViewSwipe(_ sender: UISwipeGestureRecognizer) {
-        posTimeFunctionView.color = .red
-        speedTimeFunctionView.color = .red
-        accTimeFunctionView.color = .red
-        posTimeFunctionView.setNeedsDisplay()
-        speedTimeFunctionView.setNeedsDisplay()
-        accTimeFunctionView.setNeedsDisplay()
-    }
-    
     
     func startTimeOfFunctionView(_ functionView: FunctionView) -> Double {
         return 0

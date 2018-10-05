@@ -42,13 +42,13 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="800" text="Lado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWF-fn-6Cq">
-                                                                <rect key="frame" x="0.0" y="0.0" width="98" height="98.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="78" height="98.5"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0001" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="a4y-zZ-sWh">
-                                                                <rect key="frame" x="96" y="0.0" width="226" height="99.5"/>
+                                                                <rect key="frame" x="76" y="0.0" width="246" height="99.5"/>
                                                                 <connections>
                                                                     <action selector="updateLado:" destination="BYZ-38-t0r" eventType="valueChanged" id="jzl-Jc-DHn"/>
                                                                 </connections>
@@ -78,7 +78,7 @@
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Posición Z"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <outletCollection property="gestureRecognizers" destination="pbF-mh-YXo" appends="YES" id="0yc-3x-oS5"/>
+                                                                    <outletCollection property="gestureRecognizers" destination="pbF-mh-YXo" appends="YES" id="5eU-lQ-Ved"/>
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="pfL-TN-vYE" customClass="FunctionView" customModule="Cubo_Flotando" customModuleProvider="target">
@@ -122,14 +122,8 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                         </subviews>
-                                                        <connections>
-                                                            <outletCollection property="gestureRecognizers" destination="pbF-mh-YXo" appends="YES" id="dyF-QZ-t20"/>
-                                                        </connections>
                                                     </stackView>
                                                 </subviews>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="pbF-mh-YXo" appends="YES" id="B00-Ey-aQb"/>
-                                                </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mqv-SB-CIT" userLabel="Stack beta">
                                                 <rect key="frame" x="0.0" y="258.5" width="320" height="258.5"/>
@@ -183,10 +177,6 @@
                             <constraint firstItem="AkH-4Q-xWo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yxB-Qa-1Nb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="pbF-mh-YXo" appends="YES" id="rRI-2z-e4p"/>
-                            <outletCollection property="gestureRecognizers" destination="2Ng-Df-yKA" appends="YES" id="LRT-QC-t4z"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="accLabel" destination="wV3-do-1FT" id="KRb-oj-za9"/>
@@ -203,7 +193,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="up" id="pbF-mh-YXo" userLabel="SwipeArribaAzul">
                     <connections>
-                        <action selector="upViewsSwipe:" destination="BYZ-38-t0r" id="W1q-N9-r0R"/>
+                        <action selector="swipeUpBluePTF:" destination="BYZ-38-t0r" id="ufP-2m-igV"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="down" id="2Ng-Df-yKA" userLabel="SwipeAbajoRojo">

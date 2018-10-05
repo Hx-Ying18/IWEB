@@ -34,7 +34,11 @@ class FunctionView: UIView {
     // Some atributes that can be change form the IOB
     
     @IBInspectable
-    var color: UIColor = .red
+    var color: UIColor = .red {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
     
     @IBInspectable
     var lw : Double = 1.0
