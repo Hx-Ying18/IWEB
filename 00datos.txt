@@ -5,7 +5,7 @@ Adrián Blázquez León
 
     Extras:
 
-	En muchas herramientas de visualización de gráficas carecen de una cierta interacción con el usuario que le permita personalizar las gráficas que quiere. Con este fin, añadidos los siguientes gestos en cada uiview:
+	En muchas herramientas de visualización de gráficas carecen de una cierta interacción con el usuario que le permita personalizar las gráficas que quiere. Con este fin, hemos añadidos los siguientes gestos en la view general:
  
        	- Un swipe hacia arriba cambia a azul la línea de las gráficas.
 	- Swipe hacia la abajo las cambia a rojo  	
