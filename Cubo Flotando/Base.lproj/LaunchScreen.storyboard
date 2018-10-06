@@ -18,24 +18,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" fixedFrame="YES" image="cuboFlotando" translatesAutoresizingMaskIntoConstraints="NO" id="aKO-Q2-2yA">
-                                <rect key="frame" x="57" y="126" width="285" height="300"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQm-o9-Ggu">
-                                <rect key="frame" x="75" y="49" width="225.5" height="41"/>
-                                <string key="text">Tú lo que estás viendo es  un 
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="8bL-Kk-7Le">
+                                <rect key="frame" x="0.0" y="10" width="0.0" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jC0-R0-sDY">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQm-o9-Ggu">
+                                                <string key="text">Tú lo que estás viendo es  un 
 cubo flotando . . .</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ggO-IT-CKN">
+                                        <rect key="frame" x="0.0" y="0.0" width="640" height="647"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="cuboFlotando" translatesAutoresizingMaskIntoConstraints="NO" id="aKO-Q2-2yA">
+                                                <rect key="frame" x="0.0" y="0.0" width="640" height="647"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.60959278299999997" green="0.9624983775" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="KQm-o9-Ggu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="6c1-L1-0Wb"/>
-                            <constraint firstItem="KQm-o9-Ggu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Aft-zw-iNM"/>
+                            <constraint firstItem="8bL-Kk-7Le" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="10" id="HUS-hM-bhW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8bL-Kk-7Le" secondAttribute="trailing" constant="10" id="LZW-a9-iJL"/>
+                            <constraint firstItem="8bL-Kk-7Le" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Maf-8g-qWE"/>
+                            <constraint firstAttribute="bottom" secondItem="8bL-Kk-7Le" secondAttribute="bottom" constant="10" id="V8l-tT-h9w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

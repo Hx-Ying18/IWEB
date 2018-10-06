@@ -41,7 +41,11 @@ class FunctionView: UIView {
     }
     
     @IBInspectable
-    var lw : Double = 1.0
+    var lw : Double = 1.0 {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
 
     //Number of points per unit represented
     @IBInspectable

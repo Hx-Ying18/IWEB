@@ -47,20 +47,30 @@ class ViewController: UIViewController, FunctionViewDataSource {
         timeSlider.sendActions(for: .valueChanged)
         
         generalView.isUserInteractionEnabled = true
-        let tapRec = UITapGestureRecognizer(target: self, action: #selector(processTap))
-        tapRec.numberOfTapsRequired = 2
-        view.addGestureRecognizer(tapRec)
-    }
-    
-    // If tapped, put the bgcolor of the three views to white
-    
-    @objc func processTap(_ sender: UITapGestureRecognizer){
-        posTimeFunctionView.backgroundColor = .white
-        speedTimeFunctionView.backgroundColor = .white
-        accTimeFunctionView.backgroundColor = .white
-        speedPosFunctionView.backgroundColor = .white
+        let tapRecW = UITapGestureRecognizer(target: self, action: #selector(tapWidth))
+        tapRecW.numberOfTapsRequired = 2
+        generalView.addGestureRecognizer(tapRecW)
+        
+        let tapRecN = UITapGestureRecognizer(target: self, action: #selector(tapNarrow))
+        tapRecN.numberOfTapsRequired = 1
+        generalView.addGestureRecognizer(tapRecN)
         
     }
+    
+    @objc func tapWidth(_ sender: UITapGestureRecognizer){
+        posTimeFunctionView.lw = 5
+        speedTimeFunctionView.lw = 5
+        accTimeFunctionView.lw = 5
+        speedPosFunctionView.lw = 5
+    }
+    
+    @objc func tapNarrow(_ sender: UITapGestureRecognizer){
+        posTimeFunctionView.lw = 1
+        speedTimeFunctionView.lw = 1
+        accTimeFunctionView.lw = 1
+        speedPosFunctionView.lw = 1
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
