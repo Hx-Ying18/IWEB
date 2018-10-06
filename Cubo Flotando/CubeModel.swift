@@ -62,11 +62,19 @@ class CubeModel {
      
      parameter t
      
-     return speed
+     return acc
      */
     func accAtTime(_ t: Double) -> (Double) {
         return -g*cos(w*t)
+        
     }
+    /**
+     Give the amplitude so to find
+     
+     parameter t
+     
+     return acc
+     */
     
 }
 

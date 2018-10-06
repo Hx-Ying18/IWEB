@@ -159,11 +159,20 @@ class ViewController: UIViewController, FunctionViewDataSource {
     
     /**
      Depend on the FunctionView and time ti gives the matching point.
+     
+     Also it finds the amplitude so to scale properly the axis.
      */
     func pointOfFunctionView(_ functionView: FunctionView, atTime time: Double) -> Point {
         switch functionView {
         case posTimeFunctionView :
-            return Point(x: time, y: cubeModel.posAtTime(time))
+            let A = (1/2)*cubeModel.L
+            let maxH = 0.95*Double((functionView.ymax/2)) // Dont get to the top
+            var scaled = 0.0
+            if A > maxH {
+                scaled = A/maxH
+                functionView.scaleY = scaled
+            }
+            return Point(x: time, y: (1/scaled)*cubeModel.posAtTime(time))
         case speedTimeFunctionView :
             return Point(x: time, y: cubeModel.speedAtTime(time))
         case accTimeFunctionView :
