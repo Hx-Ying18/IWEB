@@ -5,9 +5,11 @@ Adrián Blázquez León
 
     Extras:
 
-	En muchas herramientas de visualización de gráficas carecen de una cierta interacción con el usuario que le permita personalizar las gráficas que quiere. Con este fin, hemos añadidos los siguientes gestos en la view general:
+	Muchas herramientas de visualización de gráficas en el móvil carecen de una cierta interacción con el usuario que le permita personalizar las gráficas que quiere. Con este fin, hemos añadidos los siguientes gestos en la view general:
  
-       	- Un swipe hacia arriba cambia a azul la línea de las gráficas.
+      - Un swipe hacia arriba cambia a azul la línea de las gráficas.
 	- Swipe hacia la abajo las cambia a rojo  	
+	- LongPress y continuación un tap, cambia el ancho de línea a 5
+	- Y, en este estado, un tap devuelve el ancho de línea a 1.
 
 	Además, nótese que los textos se adaptan al tamaño que pueda configurar el usuario en el menú de accesibilidad de su iPhone
