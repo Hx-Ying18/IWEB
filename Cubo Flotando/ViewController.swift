@@ -192,7 +192,23 @@ class ViewController: UIViewController, FunctionViewDataSource {
             }
             return Point(x: time, y: (1/scaled)*cubeModel.accAtTime(time))
         case speedPosFunctionView :
-            return Point(x: cubeModel.posAtTime(time), y: cubeModel.speedAtTime(time))
+            
+            let Ax = (1/2)*cubeModel.L
+            let maxW = 0.95*Double((functionView.xmax/2)) // Dont get to the top
+            var scaledX = 1.0
+            if Ax > maxW {
+                scaledX = Ax/maxW
+                functionView.scaleX = scaledX
+            }
+            
+            let Ay = (1/2)*cubeModel.L*cubeModel.w// Absolute value
+            let maxH = 0.95*Double((functionView.ymax/2)) // Dont get to the top
+            var scaledY = 1.0
+            if Ay > maxH {
+                scaledY = Ay/maxH
+                functionView.scaleY = scaledY
+            }
+            return Point(x: (1/scaledX)*cubeModel.posAtTime(time), y: (1/scaledY)*cubeModel.speedAtTime(time))
         default:
             return Point(x: 0,y: 0) // Whichever point
         }
@@ -237,7 +253,22 @@ class ViewController: UIViewController, FunctionViewDataSource {
             return Point(x: t, y: (1/scaled)*cubeModel.accAtTime(t))
         default:
             let t = cubeModel.interestT
-            return Point(x: cubeModel.posAtTime(t), y: cubeModel.speedAtTime(t))
+            let Ax = (1/2)*cubeModel.L
+            let maxW = 0.95*Double((functionView.xmax/2)) // Dont get to the top
+            var scaledX = 1.0
+            if Ax > maxW {
+                scaledX = Ax/maxW
+                functionView.scaleX = scaledX
+            }
+            
+            let Ay = (1/2)*cubeModel.L*cubeModel.w// Absolute value
+            let maxH = 0.95*Double((functionView.ymax/2)) // Dont get to the top
+            var scaledY = 1.0
+            if Ay > maxH {
+                scaledY = Ay/maxH
+                functionView.scaleY = scaledY
+            }
+            return Point(x: (1/scaledX)*cubeModel.posAtTime(t), y: (1/scaledY)*cubeModel.speedAtTime(t))
         }
     }
 }
