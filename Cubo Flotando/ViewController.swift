@@ -79,7 +79,9 @@ class ViewController: UIViewController, FunctionViewDataSource {
     
      // Update the labels with a certain value, and vary the display of an special point.
     @IBAction func updateTime(_ sender: UISlider) {
-        cubeModel.interestT = Double(sender.value)*300
+        let xmax : Double = Double(posTimeFunctionView.bounds.size.width)
+        // All the views have the same width
+        cubeModel.interestT = Double(sender.value)*xmax
         let t = cubeModel.interestT
         // THe pioints of interest are represented and labeled
         
