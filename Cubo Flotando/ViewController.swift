@@ -34,18 +34,33 @@ class ViewController: UIViewController, FunctionViewDataSource {
     
      var cubeModel = CubeModel() // It is created an object of class cubeMode
     
+    @IBOutlet var generalView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // It is stored
         posTimeFunctionView.dataSource = self
         speedTimeFunctionView.dataSource = self
         accTimeFunctionView.dataSource = self
         speedPosFunctionView.dataSource = self
         ladoSlider.sendActions(for: .valueChanged)
         timeSlider.sendActions(for: .valueChanged)
+        
+        generalView.isUserInteractionEnabled = true
+        let tapRec = UITapGestureRecognizer(target: self, action: #selector(processTap))
+        tapRec.numberOfTapsRequired = 2
+        view.addGestureRecognizer(tapRec)
     }
     
+    // If tapped, put the bgcolor of the three views to white
+    
+    @objc func processTap(_ sender: UITapGestureRecognizer){
+        posTimeFunctionView.backgroundColor = .white
+        speedTimeFunctionView.backgroundColor = .white
+        accTimeFunctionView.backgroundColor = .white
+        speedPosFunctionView.backgroundColor = .white
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -117,6 +132,8 @@ class ViewController: UIViewController, FunctionViewDataSource {
         speedPosFunctionView.color = .blue
 
     }
+    
+    
     
     func startTimeOfFunctionView(_ functionView: FunctionView) -> Double {
         return 0

@@ -42,13 +42,13 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="800" text="Lado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWF-fn-6Cq">
-                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="98.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="38" height="98.5"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0001" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="a4y-zZ-sWh">
-                                                                <rect key="frame" x="48" y="0.0" width="274" height="99.5"/>
+                                                                <rect key="frame" x="36" y="0.0" width="286" height="99.5"/>
                                                                 <connections>
                                                                     <action selector="updateLado:" destination="BYZ-38-t0r" eventType="valueChanged" id="jzl-Jc-DHn"/>
                                                                 </connections>
@@ -177,11 +177,13 @@
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="pbF-mh-YXo" appends="YES" id="iif-cY-U8s"/>
                             <outletCollection property="gestureRecognizers" destination="2Ng-Df-yKA" appends="YES" id="N1D-NB-PCu"/>
+                            <outletCollection property="gestureRecognizers" destination="ahH-SY-gtf" appends="YES" id="OCI-gS-mgc"/>
                         </connections>
                     </view>
                     <connections>
                         <outlet property="accLabel" destination="wV3-do-1FT" id="KRb-oj-za9"/>
                         <outlet property="accTimeFunctionView" destination="HiF-Lu-Tai" id="o8V-y7-pzx"/>
+                        <outlet property="generalView" destination="8bC-Xf-vdC" id="Xps-ox-zT4"/>
                         <outlet property="ladoSlider" destination="a4y-zZ-sWh" id="SMj-qC-AfZ"/>
                         <outlet property="posLabel" destination="Prh-fB-W6y" id="aa8-MZ-vbQ"/>
                         <outlet property="posTimeFunctionView" destination="3qb-d2-aZm" id="pV7-nJ-hiC"/>
@@ -202,6 +204,7 @@
                         <action selector="swipeDownRed:" destination="BYZ-38-t0r" id="sHL-2y-Rl8"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer id="ahH-SY-gtf" userLabel="TapWhite"/>
             </objects>
             <point key="canvasLocation" x="116.25" y="117.5"/>
         </scene>
