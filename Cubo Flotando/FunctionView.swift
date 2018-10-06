@@ -101,11 +101,14 @@ class FunctionView: UIView {
     
     override func draw(_ rect: CGRect) {
         // Drawing code
+        // - It must be update the xmax, ymax
+        updateSize()
         drawAxis()
         drawTrajectory()
         drawPOI()
         drawTicks()
         drawText()
+        
     }
     
     /** Draw the axis in the UIView
@@ -227,12 +230,9 @@ class FunctionView: UIView {
     private func drawText() {
         //Is not seen
         let attrs = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.caption1)]
+     
         
-//        let attrs = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12)]
-        
-        let offset: CGFloat = 4 // Separation from the text to teh bounds
-        
-        // It is chosen the texts according to the type of dataSOurce
+        let offset: CGFloat = 4 //
         
         
         let asX = NSAttributedString(string: textX, attributes: attrs)
@@ -245,6 +245,12 @@ class FunctionView: UIView {
         let posY = CGPoint(x: xmax/2 + offset, y: offset)
         asY.draw(at: posY)
         
+    }
+    
+    // Update Size
+    private func updateSize() {
+        self.xmax = bounds.size.width
+        self.ymax = bounds.size.height
     }
     
     // It must be translated the coordinates found by the CubeModel to teh UIView: just centering in the point (xmax/2, ymax/2)
