@@ -174,9 +174,23 @@ class ViewController: UIViewController, FunctionViewDataSource {
             }
             return Point(x: time, y: (1/scaled)*cubeModel.posAtTime(time))
         case speedTimeFunctionView :
-            return Point(x: time, y: cubeModel.speedAtTime(time))
+            let A = (1/2)*cubeModel.L*cubeModel.w// Absolute value
+            let maxH = 0.95*Double((functionView.ymax/2)) // Dont get to the top
+            var scaled = 1.0
+            if A > maxH {
+                scaled = A/maxH
+                functionView.scaleY = scaled
+            }
+            return Point(x: time, y: (1/scaled)*cubeModel.speedAtTime(time))
         case accTimeFunctionView :
-            return Point(x: time, y: cubeModel.accAtTime(time))
+            let A = cubeModel.g// Absolute value
+            let maxH = 0.95*Double((functionView.ymax/2)) // Dont get to the top
+            var scaled = 1.0
+            if A > maxH {
+                scaled = A/maxH
+                functionView.scaleY = scaled
+            }
+            return Point(x: time, y: (1/scaled)*cubeModel.accAtTime(time))
         case speedPosFunctionView :
             return Point(x: cubeModel.posAtTime(time), y: cubeModel.speedAtTime(time))
         default:
@@ -202,11 +216,25 @@ class ViewController: UIViewController, FunctionViewDataSource {
             }
             return Point(x: t, y: (1/scaled)*cubeModel.posAtTime(t))
         case speedTimeFunctionView:
+            let A = (1/2)*cubeModel.L*cubeModel.w// Absolute value
+            let maxH = 0.95*Double((functionView.ymax/2)) // Dont get to the top
+            var scaled = 1.0
+            if A > maxH {
+                scaled = A/maxH
+                functionView.scaleY = scaled
+            }
             let t = cubeModel.interestT
-            return Point(x: t, y: cubeModel.speedAtTime(t))
+            return Point(x: t, y: (1/scaled)*cubeModel.speedAtTime(t))
         case accTimeFunctionView:
+            let A = cubeModel.g// Absolute value
+            let maxH = 0.95*Double((functionView.ymax/2)) // Dont get to the top
+            var scaled = 1.0
+            if A > maxH {
+                scaled = A/maxH
+                functionView.scaleY = scaled
+            }
             let t = cubeModel.interestT
-            return Point(x: t, y: cubeModel.accAtTime(t))
+            return Point(x: t, y: (1/scaled)*cubeModel.accAtTime(t))
         default:
             let t = cubeModel.interestT
             return Point(x: cubeModel.posAtTime(t), y: cubeModel.speedAtTime(t))

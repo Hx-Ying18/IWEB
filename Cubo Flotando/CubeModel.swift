@@ -26,7 +26,7 @@ class CubeModel {
         }
     }
     
-    private var g = 9.8
+    var g = 9.8 // It is get from out
     var w = 6.0 // It is found when neccesary.
     //   private var A = 1.0
     
