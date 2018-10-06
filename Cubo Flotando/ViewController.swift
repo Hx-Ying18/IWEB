@@ -47,9 +47,8 @@ class ViewController: UIViewController, FunctionViewDataSource {
         timeSlider.sendActions(for: .valueChanged)
         
         generalView.isUserInteractionEnabled = true
-        let tapRecW = UITapGestureRecognizer(target: self, action: #selector(tapWidth))
-        tapRecW.numberOfTapsRequired = 2
-        generalView.addGestureRecognizer(tapRecW)
+        let LPRecW = UILongPressGestureRecognizer(target: self, action: #selector(LPWidth))
+        generalView.addGestureRecognizer(LPRecW)
         
         let tapRecN = UITapGestureRecognizer(target: self, action: #selector(tapNarrow))
         tapRecN.numberOfTapsRequired = 1
@@ -57,7 +56,10 @@ class ViewController: UIViewController, FunctionViewDataSource {
         
     }
     
-    @objc func tapWidth(_ sender: UITapGestureRecognizer){
+    @objc func LPWidth(_ sender: UITapGestureRecognizer){
+        
+        if sender.state != .began {return}
+        
         posTimeFunctionView.lw = 5
         speedTimeFunctionView.lw = 5
         accTimeFunctionView.lw = 5

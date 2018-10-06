@@ -177,8 +177,8 @@
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="pbF-mh-YXo" appends="YES" id="iif-cY-U8s"/>
                             <outletCollection property="gestureRecognizers" destination="2Ng-Df-yKA" appends="YES" id="N1D-NB-PCu"/>
-                            <outletCollection property="gestureRecognizers" destination="ahH-SY-gtf" appends="YES" id="OCI-gS-mgc"/>
                             <outletCollection property="gestureRecognizers" destination="Sav-1e-UAT" appends="YES" id="F8q-w7-hCC"/>
+                            <outletCollection property="gestureRecognizers" destination="g4P-HW-3gk" appends="YES" id="Za1-SN-VHf"/>
                         </connections>
                     </view>
                     <connections>
@@ -195,6 +195,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="g4P-HW-3gk" userLabel="LPWidth"/>
                 <tapGestureRecognizer id="Sav-1e-UAT" userLabel="TapNarrow"/>
                 <swipeGestureRecognizer direction="up" id="pbF-mh-YXo" userLabel="SwipeArribaAzul">
                     <connections>
@@ -206,7 +207,6 @@
                         <action selector="swipeDownRed:" destination="BYZ-38-t0r" id="sHL-2y-Rl8"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <tapGestureRecognizer id="ahH-SY-gtf" userLabel="TapWidth"/>
             </objects>
             <point key="canvasLocation" x="116.25" y="117.5"/>
         </scene>
