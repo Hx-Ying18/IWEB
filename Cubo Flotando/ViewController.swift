@@ -167,7 +167,7 @@ class ViewController: UIViewController, FunctionViewDataSource {
         case posTimeFunctionView :
             let A = (1/2)*cubeModel.L
             let maxH = 0.95*Double((functionView.ymax/2)) // Dont get to the top
-            var scaled = 0.0
+            var scaled = 1.0
             if A > maxH {
                 scaled = A/maxH
                 functionView.scaleY = scaled
