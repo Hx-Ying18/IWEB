@@ -193,7 +193,14 @@ class ViewController: UIViewController, FunctionViewDataSource {
         switch functionView {
         case posTimeFunctionView:
             let t = cubeModel.interestT
-            return Point(x: t, y: cubeModel.posAtTime(t))
+            let A = (1/2)*cubeModel.L
+            let maxH = 0.95*Double((functionView.ymax/2)) // Dont get to the top
+            var scaled = 1.0
+            if A > maxH {
+                scaled = A/maxH
+                functionView.scaleY = scaled
+            }
+            return Point(x: t, y: (1/scaled)*cubeModel.posAtTime(t))
         case speedTimeFunctionView:
             let t = cubeModel.interestT
             return Point(x: t, y: cubeModel.speedAtTime(t))
