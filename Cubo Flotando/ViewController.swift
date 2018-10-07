@@ -54,6 +54,10 @@ class ViewController: UIViewController, FunctionViewDataSource {
         tapRecN.numberOfTapsRequired = 1
         generalView.addGestureRecognizer(tapRecN)
         
+        posLabel.setNeedsDisplay()
+        speedLabel.setNeedsDisplay()
+        accLabel.setNeedsDisplay()
+        
     }
     
     @objc func LPWidth(_ sender: UITapGestureRecognizer){
@@ -161,6 +165,8 @@ class ViewController: UIViewController, FunctionViewDataSource {
      Depend on the FunctionView and time ti gives the matching point.
      
      Also it finds the amplitude so to scale properly the axis.
+     
+     It is aplied an standard scale, so to wacth them properly.
      */
     func pointOfFunctionView(_ functionView: FunctionView, atTime time: Double) -> Point {
         switch functionView {
@@ -176,7 +182,7 @@ class ViewController: UIViewController, FunctionViewDataSource {
         case speedTimeFunctionView :
             let A = (1/2)*cubeModel.L*cubeModel.w// Absolute value
             let maxH = 0.95*Double((functionView.ymax/2)) // Dont get to the top
-            var scaled = 1.0
+            var scaled = 0.5
             if A > maxH {
                 scaled = A/maxH
                 functionView.scaleY = scaled
@@ -185,27 +191,25 @@ class ViewController: UIViewController, FunctionViewDataSource {
         case accTimeFunctionView :
             let A = cubeModel.g// Absolute value
             let maxH = 0.95*Double((functionView.ymax/2)) // Dont get to the top
-            var scaled = 1.0
+            var scaled = 0.2
             if A > maxH {
                 scaled = A/maxH
                 functionView.scaleY = scaled
             }
             return Point(x: time, y: (1/scaled)*cubeModel.accAtTime(time))
         case speedPosFunctionView :
-            
-            let Ax = (1/2)*cubeModel.L
+            var scaledX = 0.25
+            let Ax = (1/2)*cubeModel.L*(1/scaledX)
             let maxW = 0.95*Double((functionView.xmax/2)) // Dont get to the top
-            var scaledX = 1.0
             if Ax > maxW {
-                scaledX = Ax/maxW
+                scaledX = 0.25*Ax/maxW
                 functionView.scaleX = scaledX
             }
-            
-            let Ay = (1/2)*cubeModel.L*cubeModel.w// Absolute value
+            var scaledY = 0.25
+            let Ay = 0.25*(1/2)*cubeModel.L*cubeModel.w// Absolute value
             let maxH = 0.95*Double((functionView.ymax/2)) // Dont get to the top
-            var scaledY = 1.0
             if Ay > maxH {
-                scaledY = Ay/maxH
+                scaledY = (1/4)*Ay/maxH
                 functionView.scaleY = scaledY
             }
             return Point(x: (1/scaledX)*cubeModel.posAtTime(time), y: (1/scaledY)*cubeModel.speedAtTime(time))
@@ -234,7 +238,7 @@ class ViewController: UIViewController, FunctionViewDataSource {
         case speedTimeFunctionView:
             let A = (1/2)*cubeModel.L*cubeModel.w// Absolute value
             let maxH = 0.95*Double((functionView.ymax/2)) // Dont get to the top
-            var scaled = 1.0
+            var scaled = 0.5
             if A > maxH {
                 scaled = A/maxH
                 functionView.scaleY = scaled
@@ -244,7 +248,7 @@ class ViewController: UIViewController, FunctionViewDataSource {
         case accTimeFunctionView:
             let A = cubeModel.g// Absolute value
             let maxH = 0.95*Double((functionView.ymax/2)) // Dont get to the top
-            var scaled = 1.0
+            var scaled = 0.2
             if A > maxH {
                 scaled = A/maxH
                 functionView.scaleY = scaled
@@ -252,20 +256,20 @@ class ViewController: UIViewController, FunctionViewDataSource {
             let t = cubeModel.interestT
             return Point(x: t, y: (1/scaled)*cubeModel.accAtTime(t))
         default:
+            var scaledX = 0.25
             let t = cubeModel.interestT
-            let Ax = (1/2)*cubeModel.L
+            let Ax = (1/scaledX)*(1/2)*cubeModel.L
             let maxW = 0.95*Double((functionView.xmax/2)) // Dont get to the top
-            var scaledX = 1.0
             if Ax > maxW {
-                scaledX = Ax/maxW
+                scaledX = 0.25*Ax/maxW
                 functionView.scaleX = scaledX
             }
-            
-            let Ay = (1/2)*cubeModel.L*cubeModel.w// Absolute value
+             var scaledY = 0.25
+            let Ay = (1/scaledY)*(1/2)*cubeModel.L*cubeModel.w// Absolute value
             let maxH = 0.95*Double((functionView.ymax/2)) // Dont get to the top
-            var scaledY = 1.0
+           
             if Ay > maxH {
-                scaledY = Ay/maxH
+                scaledY = 0.25*Ay/maxH
                 functionView.scaleY = scaledY
             }
             return Point(x: (1/scaledX)*cubeModel.posAtTime(t), y: (1/scaledY)*cubeModel.speedAtTime(t))

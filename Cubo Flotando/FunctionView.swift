@@ -201,7 +201,7 @@ class FunctionView: UIView {
         
         let ptsYByTick = Double(ymax) / numberOfTicks
         let unitsYByTick = (ptsYByTick / scaleY).roundedThreeDigit
-        print("\(unitsYByTick)")
+        // print("\(unitsYByTick)")
         for y in stride(from: -numberOfTicks * unitsYByTick, to: numberOfTicks * unitsYByTick, by: unitsYByTick){
             let px = centerX(0)
             let py = centerY(y)
