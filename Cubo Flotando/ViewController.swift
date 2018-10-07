@@ -81,7 +81,7 @@ class ViewController: UIViewController, FunctionViewDataSource {
     // The update also display the new
     @IBAction func updateLado(_ sender: UISlider) {
         
-        cubeModel.L = Double(sender.value)*1000
+        cubeModel.L = Double(sender.value)*100
         
         posTimeFunctionView.setNeedsDisplay()
         speedTimeFunctionView.setNeedsDisplay()
@@ -154,7 +154,7 @@ class ViewController: UIViewController, FunctionViewDataSource {
     }
     
     func endTimeOfFunctionView(_ functionView: FunctionView) -> Double {
-        return 300
+        return 150
     }
     
     /**

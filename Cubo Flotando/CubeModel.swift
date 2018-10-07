@@ -20,7 +20,7 @@ class CubeModel {
 //        }
 //    }
     
-    var L : Double = 100.0{
+    var L : Double = 50.0{
         didSet {
             updateW()
         }

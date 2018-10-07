@@ -195,12 +195,13 @@ class FunctionView: UIView {
  */
     private func drawTicks() {
         
-        let numberOfTicks = 8.0
+        let numberOfTicks = 16.0
         
         UIColor.black.set()
         
         let ptsYByTick = Double(ymax) / numberOfTicks
-        let unitsYByTick = (ptsYByTick / scaleY).roundedOneDigit
+        let unitsYByTick = (ptsYByTick / scaleY).roundedThreeDigit
+        print("\(unitsYByTick)")
         for y in stride(from: -numberOfTicks * unitsYByTick, to: numberOfTicks * unitsYByTick, by: unitsYByTick){
             let px = centerX(0)
             let py = centerY(y)
@@ -213,7 +214,7 @@ class FunctionView: UIView {
             }
         
         let ptsXByTick = Double(xmax) / numberOfTicks
-        let unitsXByTick = (ptsXByTick / scaleX).roundedOneDigit
+        let unitsXByTick = (ptsXByTick / scaleX).roundedThreeDigit
         for x in stride(from: -numberOfTicks * unitsXByTick, to: numberOfTicks * unitsXByTick, by: unitsXByTick){
             let px = centerX(x)
             let py = centerY(0)
@@ -264,18 +265,18 @@ class FunctionView: UIView {
 }
 
 extension Double{
-    var roundedOneDigit: Double {
+    var roundedThreeDigit: Double {
         get {
             var d = self
             var by = 1.0
             
-            while d > 10 {
-                d /= 10
-                by = by * 10
+            while d > 1 {
+                d /= 1000
+                by = by * 1000
             }
             while d < 1{
-                d *= 10
-                by = by / 10
+                d *= 1000
+                by = by / 1000
             }
             return d.rounded() * by
         }
