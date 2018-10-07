@@ -13,3 +13,6 @@ Adrián Blázquez León
 	- Y, en este estado, un tap devuelve el ancho de línea a 1.
 
 	Además, nótese que los textos se adaptan al tamaño que pueda configurar el usuario en el menú de accesibilidad de su iPhone y así como las gráficas al valor del lado del cubo: obsérvese que las gráficas no salen de la view sino que el número de ticks en los ejes disminuye para representar las funciones escaladas. 
+
+
+        Nota: por último, observamos que aunque no se representen correctamente las constraints de autolayout en la preview estas sí son correctas en la simulación.
