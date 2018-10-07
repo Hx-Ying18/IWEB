@@ -199,7 +199,7 @@ class FunctionView: UIView {
         
         UIColor.black.set()
         
-        let ptsYByTick = Double(bounds.size.height) / numberOfTicks
+        let ptsYByTick = Double(ymax) / numberOfTicks
         let unitsYByTick = (ptsYByTick / scaleY).roundedOneDigit
         for y in stride(from: -numberOfTicks * unitsYByTick, to: numberOfTicks * unitsYByTick, by: unitsYByTick){
             let px = centerX(0)
@@ -212,7 +212,7 @@ class FunctionView: UIView {
             path.stroke()
             }
         
-        let ptsXByTick = Double(bounds.size.width) / numberOfTicks
+        let ptsXByTick = Double(xmax) / numberOfTicks
         let unitsXByTick = (ptsXByTick / scaleX).roundedOneDigit
         for x in stride(from: -numberOfTicks * unitsXByTick, to: numberOfTicks * unitsXByTick, by: unitsXByTick){
             let px = centerX(x)
