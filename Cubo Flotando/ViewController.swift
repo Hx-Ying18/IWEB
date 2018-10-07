@@ -154,7 +154,7 @@ class ViewController: UIViewController, FunctionViewDataSource {
     }
     
     func endTimeOfFunctionView(_ functionView: FunctionView) -> Double {
-        return 150
+        return 300
     }
     
     /**

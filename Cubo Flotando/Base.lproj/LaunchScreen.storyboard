@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="ipad9_7" orientation="landscape">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,11 +17,11 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQm-o9-Ggu">
-                                <rect key="frame" x="350" y="40" width="324" height="63.5"/>
+                                <rect key="frame" x="25.666666666666657" y="40" width="324" height="63.666666666666657"/>
                                 <string key="text">Tú lo que estás viendo es  un 
 cubo flotando . . .</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
@@ -29,7 +29,7 @@ cubo flotando . . .</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="cuboFlotando" translatesAutoresizingMaskIntoConstraints="NO" id="aKO-Q2-2yA">
-                                <rect key="frame" x="337.5" y="163.5" width="349" height="384"/>
+                                <rect key="frame" x="3" y="163.66666666666663" width="369" height="406"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="aKO-Q2-2yA" secondAttribute="height" multiplier="1:1.1" id="AWg-yT-3n0"/>
                                 </constraints>
@@ -53,6 +53,6 @@ cubo flotando . . .</string>
         </scene>
     </scenes>
     <resources>
-        <image name="cuboFlotando" width="640" height="266"/>
+        <image name="cuboFlotando" width="426" height="177"/>
     </resources>
 </document>

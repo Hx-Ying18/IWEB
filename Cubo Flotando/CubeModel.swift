@@ -26,7 +26,7 @@ class CubeModel {
         }
     }
     
-    var g = 9.8 // It is get from out
+    var g = 5.0 // Another planet so the graphic looks great
     var w = 6.0 // It is found when neccesary.
     //   private var A = 1.0
     
